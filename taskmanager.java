@@ -9,7 +9,7 @@ public class taskmanager {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\n -----The list is running please add the values for the list -----\n");
         coreLogic logic = new coreLogic(); //var = class() in python
-        logic.buildList(scanner); //load the scanner into the class and method
+        logic.buildList(scanner); //load the scanner into the class and method simular to var.function() in python
 
         scanner.close();
     }
