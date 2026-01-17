@@ -63,13 +63,17 @@ public class coreLogic {
                 System.out.println("\nPlease set the duedate for the task (yyy/mm/d): ");
 
                 System.out.println("Please set the day: ");
-                String day = scanner.nextLine();
+                Integer day = scanner.nextInt();
 
                 System.out.println("Please set the month: ");
-                String month = scanner.nextLine();
+                Integer month = scanner.nextInt();
 
                 System.out.println("Please set the year: ");
-                String year = scanner.nextLine();
+                Integer year = scanner.nextInt();
+
+                if (month < 1 || month > 12) {
+                    throw new IllegalArgumentException("The month can't be less than 1 or be bigger than 12 please try again");
+                }
 
             } catch (IllegalArgumentException error) {
                 System.out.println("\nThere is an error in the input validation");
