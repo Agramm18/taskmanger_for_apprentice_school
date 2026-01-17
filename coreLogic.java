@@ -7,6 +7,7 @@ public class coreLogic {
     String taskTitle;
     Integer Priority;
     String dueDate;
+    Integer ID;
 
     //Build a constructor to set the class like def init in python
     public coreLogic() {
@@ -15,6 +16,7 @@ public class coreLogic {
         this.taskTitle = null;
         this.Priority = null;
         this.dueDate = null;
+        this.ID = 0;
     }
 
     //Core Functions to build the list
@@ -38,6 +40,7 @@ public class coreLogic {
                     System.out.println("Your task is: " + this.taskTitle + "\n");
                 }
 
+                
                 //Get the priority from the task
                 System.out.println("\nPlease set the priority from your task: ");
                 System.out.println("Please note that you only can set a priority between 1 and 5\n");
@@ -54,6 +57,19 @@ public class coreLogic {
                     System.out.println("\nThe priority is setted sucsessfully \n");
                     System.out.println("\nThe priority from your task is: " + this.Priority + "\n");
                 }
+
+                //Set date values
+
+                System.out.println("\nPlease set the duedate for the task (yyy/mm/d): ");
+
+                System.out.println("Please set the day: ");
+                String day = scanner.nextLine();
+
+                System.out.println("Please set the month: ");
+                String month = scanner.nextLine();
+
+                System.out.println("Please set the year: ");
+                String year = scanner.nextLine();
 
             } catch (IllegalArgumentException error) {
                 System.out.println("\nThere is an error in the input validation");
